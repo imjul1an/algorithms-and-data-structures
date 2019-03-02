@@ -4,6 +4,7 @@
   "description": "algorithms and data structures",
   "main": "index.js",
   "scripts": {
+    "dev": "NODE_ENV=dev babel-node ./index.js",
     "test": "NODE_ENV=test jest --config=jest.config.js --no-cache --maxWorkers=4"
   },
   "author": "Julian Ustiyanovych",
@@ -15,6 +16,7 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
+    "@babel/node": "^7.2.2",
     "eslint": "^5.15.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
