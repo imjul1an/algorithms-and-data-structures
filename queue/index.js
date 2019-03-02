@@ -1,4 +1,4 @@
-// First In, First Out
+// FIFO - first In, first out
 export const createQueue = () => {
   const queue = []
 

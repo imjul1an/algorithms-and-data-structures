@@ -1,27 +1,25 @@
 import { createPriorityQueue } from '../index'
 
 describe('High Priority Queue', () => {
-  it('should peek the right task in the queue. FIFO', () => {
+  it('should dequeue the high priority task first', () => {
     const q = createPriorityQueue()
-    q.enqueue('message one')
-    q.enqueue('message two')
-    q.enqueue('message three')
 
-    q.dequeue()
+    q.enqueue('task one')
+    q.enqueue('task two')
+    q.enqueue('task three', true)
+    q.enqueue('task four')
 
-    expect(q.length).toBe(2)
-    expect(q.peek()).toBe('message two')
+    expect(q.dequeue()).toEqual('task three')
   })
 
-  it('should peek first the priority task in the queue. FIFO', () => {
+  it('should dequeue the last task in the queue if no high priority tasks available', () => {
     const q = createPriorityQueue()
-    q.enqueue('message one')
-    q.enqueue('message two')
-    q.enqueue('message three', true)
-    q.enqueue('message four')
-    q.enqueue('message five')
 
-    expect(q.length).toBe(5)
-    expect(q.peek()).toBe('message three')
+    q.enqueue('task one')
+    q.enqueue('task two')
+    q.enqueue('task three')
+    q.enqueue('task four')
+
+    expect(q.dequeue()).toEqual('task one')
   })
 })
