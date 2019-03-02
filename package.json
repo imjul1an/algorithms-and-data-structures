@@ -9,12 +9,16 @@
   "author": "Julian Ustiyanovych",
   "license": "MIT",
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
-    "jest": "^24.1.0"
+    "@babel/polyfill": "^7.2.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.3",
-    "@babel/preset-env": "^7.3.1"
+    "@babel/preset-env": "^7.3.1",
+    "eslint": "^5.15.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4"
   }
 }
